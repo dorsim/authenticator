@@ -1,11 +1,11 @@
 def artifactoryServer = Artifactory.server 'Artifactory'
 def buildInfo = Artifactory.newBuildInfo()
 def artifactRepo = 'libs-release-local'
+def groupId = 'm3l'
 def projectName = 'authenticator'
-def repositoryPath = "${artifactRepo}/${projectName}/"
-def version = "1.0.0-${BUILD_NUMBER}"
-def outputFileName = "authenticator-${version}.jar"
-def artifactChecksum = ''
+def version = "1.0.2"
+def repositoryPath = "${artifactRepo}/${groupId}/${projectName}/${version}/"
+def outputFileName = "${projectName}-${version}.jar"
 
 pipeline {
     agent any

@@ -15,6 +15,11 @@ public class App
     public static void main(String[] args)
     {
         System.out.println("Authenticator starting");
+        if (System.getProperty("password") == null) {
+            System.err.println("Authenticator server must init with -Dpassword=value");
+            System.exit(1);
+        }
+
         int port = 18923;
 
         BasicServer srv;
