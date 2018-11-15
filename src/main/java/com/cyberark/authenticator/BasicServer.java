@@ -56,7 +56,8 @@ public class BasicServer
                 String message = this.receive(connection);
 
                 String timeStamp = new java.util.Date().toString();
-                String returnCode = "Message received at " + timeStamp + " Logic Result: " + this.doLogic(connection,message) + ((char) 0);
+                String returnCode = doLogic(connection,message);
+//                String returnCode = "Message received at " + timeStamp + " Logic Result: " + this.doLogic(connection,message) + ((char) 0);
                 this.send(connection, returnCode);
             }
             catch (IOException e)
@@ -101,6 +102,6 @@ public class BasicServer
 
     protected String doLogic(Socket connection,String message) throws Exception
     {
-        return ("None");
+        return "None";
     }
 }
