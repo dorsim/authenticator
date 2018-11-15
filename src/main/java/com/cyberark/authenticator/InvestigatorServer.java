@@ -59,7 +59,7 @@ public class InvestigatorServer extends BasicServer {
         String jarName = "";
 
         // Currently only Java is supported
-        if (!commandLine.toLowerCase().startsWith("java")) {
+        if (!commandLine.toLowerCase().contains("java")) {
             System.out.println("getJarFromCommandLine: the calling process doesn't run Java");
             throw new Exception("the calling process doesn't run Java");
         } else {

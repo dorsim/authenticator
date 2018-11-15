@@ -15,7 +15,7 @@ plugins {
 }
 
 group 'Authenticator'
-version '1.0.3'
+version '1.0.4'
 
 // Define the main class for the application
 mainClassName = 'com.cyberark.authenticator.App'

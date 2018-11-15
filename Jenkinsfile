@@ -3,7 +3,7 @@ def buildInfo = Artifactory.newBuildInfo()
 def artifactRepo = 'libs-release-local'
 def groupId = 'm3l'
 def projectName = 'authenticator'
-def version = "1.0.3"
+def version = "1.0.4"
 def repositoryPath = "${artifactRepo}/${groupId}/${projectName}/${version}/"
 def outputFileName = "${projectName}-${version}.jar"
 
