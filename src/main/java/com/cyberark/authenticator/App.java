@@ -14,7 +14,7 @@ public class App
 {
     public static void main(String[] args)
     {
-        System.out.println("Hello World (Server)");
+        System.out.println("Authenticator starting");
         int port = 18923;
 
         BasicServer srv;

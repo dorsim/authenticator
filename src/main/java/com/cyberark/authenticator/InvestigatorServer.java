@@ -41,11 +41,19 @@ public class InvestigatorServer extends BasicServer {
                 M3LClient m3lclient = new M3LClient();
                 if (m3lclient.checkHash(hash))
                 {
-                    return("password");
+                    String password = System.getProperty("password");
+                    if (password != null)
+                    {
+                        return (password);
+                    }
+                    else
+                    {
+                        return "nopassword";
+                    }
                 }
                 else
                 {
-                    return ("nopassword");
+                    return ("Application unauthorized");
                 }
             } else {
                 throw new Exception("The given PID is false");
