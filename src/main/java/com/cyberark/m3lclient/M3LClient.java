@@ -11,7 +11,7 @@ public class M3LClient
     public boolean checkHash(String hash) {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setMessageConverters(Collections.singletonList(new MappingJackson2HttpMessageConverter()));
-        ResponseEntity<Result> response = restTemplate.getForEntity("http://ec2-18-191-200-247.us-east-2.compute.amazonaws.com/application/" + hash, Result.class);
+        ResponseEntity<Result> response = restTemplate.getForEntity("http://ec2-18-188-184-139.us-east-2.compute.amazonaws.com/application/" + hash, Result.class);
 
         return (response.getBody().getValid());
     }
